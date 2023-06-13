@@ -1,0 +1,38 @@
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.box h1 {
+    font-size: 40px;
+    font-family: 'Comic Sans MS', cursive;
+    margin-top: 50px;
+}
+
+.box p {
+    font-size: 20px;
+}
+
+.magic {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    margin: 0 auto;
+    margin-top: 50px;
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
