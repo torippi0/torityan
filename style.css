@@ -1,30 +1,31 @@
-.box {
-    width: 400px;
-    height: 400px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #F1F1F1;
 }
 
-.box h1 {
+.container h1 {
     font-size: 40px;
-    font-family: 'Comic Sans MS', cursive;
-    margin-top: 50px;
+    color: #333333;
+    margin-bottom: 20px;
 }
 
-.box p {
-    font-size: 20px;
+.circle-container {
+    display: flex;
+    justify-content: center;
 }
 
-.magic {
+.circle {
     width: 100px;
     height: 100px;
-    background-color: purple;
-    margin: 0 auto;
-    margin-top: 50px;
+    border-radius: 50%;
+    margin: 10px;
     animation-name: spin;
     animation-duration: 3s;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
@@ -35,4 +36,9 @@
     100% {
         transform: rotate(360deg);
     }
+}
+
+p {
+    font-size: 20px;
+    color: #777777;
 }
