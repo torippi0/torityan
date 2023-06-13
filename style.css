@@ -1,44 +1,48 @@
-.container {
+.card-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #F1F1F1;
 }
 
-.container h1 {
-    font-size: 40px;
-    color: #333333;
+.card {
+    width: 300px;
+    background-color: #F5F5F5;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #777777;
     margin-bottom: 20px;
 }
 
-.circle-container {
-    display: flex;
-    justify-content: center;
-}
-
-.circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 10px;
-    animation-name: spin;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-p {
-    font-size: 20px;
-    color: #777777;
+.card-content a {
+    display: inline-block;
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
 }
