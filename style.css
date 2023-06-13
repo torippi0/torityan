@@ -1,48 +1,78 @@
-.card-container {
+.container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    height: 100vh;
+    background-color: #1D1D1D;
 }
 
-.card {
-    width: 300px;
-    background-color: #F5F5F5;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 20px;
-}
-
-.card-content h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.card-content p {
-    font-size: 16px;
-    color: #777777;
-    margin-bottom: 20px;
-}
-
-.card-content a {
-    display: inline-block;
-    background-color: #333333;
+h1 {
+    font-size: 60px;
     color: #FFFFFF;
-    padding: 8px 16px;
-    border-radius: 4px;
-    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+.shape {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #FF4081;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.shape:before,
+.shape:after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.shape:before {
+    top: -30px;
+    left: -30px;
+}
+
+.shape:after {
+    bottom: -30px;
+    right: -30px;
+}
+
+.shape:nth-child(2n) {
+    background-color: #536DFE;
+    transform: rotate(45deg);
+}
+
+.shape:nth-child(2n):before,
+.shape:nth-child(2n):after {
+    background-color: #1D1D1D;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.shape:nth-child(3n) {
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.shape:nth-child(4n) {
+    width: 300px;
+    height: 100px;
+    border-radius: 8px;
+    background-color: #FF5722;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
